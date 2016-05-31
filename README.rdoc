@@ -10,12 +10,11 @@
  users: a@a.com password: 12345678  / b@b.com password: 12345678
  
 
-*About
-This app is a demo  to demonstrate the relationships between users-orders(belongs_to) and orders-products (many to many)
+* About: This app is a demo  to demonstrate the relationships between users-orders(belongs_to) and orders-products (many to many)
 
-Users : Devise
-DB: SQLITE3
-Views:'adminlte2-rails'
+* Users : Devise
+* DB: SQLITE3
+* Views:'adminlte2-rails'
 
 
 
