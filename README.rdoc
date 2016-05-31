@@ -1,27 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version : 2.1.5
+* Rails version: 4.1.8
 
-Things you may want to cover:
 
-* Ruby version
+* Database creation: This demo runs over SQLite3
 
-* System dependencies
+* Database initialization: I you want a fake init data: rake db:seed , users and productsare automatically generated.
+ users: a@a.com password: 12345678  / b@b.com password: 12345678
+ 
 
-* Configuration
+*About
+This app is a demo  to demonstrate the relationships between users-orders(belongs_to) and orders-products (many to many)
 
-* Database creation
+Users : Devise
+DB: SQLITE3
+Views:'adminlte2-rails'
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
