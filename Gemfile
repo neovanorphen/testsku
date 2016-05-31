@@ -1,9 +1,19 @@
 source 'http://rubygems.org'
 
+gem 'jquery-turbolinks'
 
+
+gem 'adminlte2-rails'
+
+group :assets do
+  gem 'jquery-ui-rails'
+end
+gem 'ionicons-rails'
+
+gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
-# Use sqlite3 as the database for Active Record
+# Use postgresql as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -37,3 +47,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem "devise"
+

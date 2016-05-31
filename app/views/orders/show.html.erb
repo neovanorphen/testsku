@@ -1,0 +1,39 @@
+<section class="content-header">
+  <h1>
+    Orders
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/orders">Orders</a></li>
+    <li class="active">Order Details</li>
+  </ol>
+</section>
+
+<section class="content">
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-12">
+      <!-- general form elements -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Order Details</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <div class="box-body">
+          <p>
+            <strong>Code:</strong>
+            <%= @order.code %>
+          </p>
+          <p>
+            <strong>Date:</strong>
+            <%= @order.date %>
+          </p>
+        </div>
+        <div class="box-footer">
+          <%= link_to 'Edit', edit_order_path(@order) ,:class =>"btn bg-purple margin"%>
+          <%= link_to 'Back', orders_path ,:class =>"btn bg-purple margin"%>
+        </div>
+      </div><!-- /.box -->
+    </div>
+  </div>   <!-- /.row -->
+</section><!-- /.content -->

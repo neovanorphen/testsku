@@ -39,3 +39,4 @@ bower.json
 .idea/dictionaries/Felipe.xml
 *.xml
 *.iml
+.idea/dataSources.ids

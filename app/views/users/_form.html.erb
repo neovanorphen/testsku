@@ -1,0 +1,69 @@
+<%= form_for(@user) do |f| %>
+    <div class="box-body">
+      <div class="form-group">
+        <%= f.label :email %><br>
+        <div class="input-group ">
+          <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+          <%= f.text_field :email , :class => 'form-control'%>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <%= f.label :encrypted_password %><br>
+        <%= f.text_field :encrypted_password, :class => 'form-control',:readonly => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :reset_password_token %><br>
+        <%= f.text_field :reset_password_token, :class => 'form-control', :readonly => true, :disabled => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :reset_password_sent_at %><br>
+        <%= f.datetime_select :reset_password_sent_at ,:disabled => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :remember_created_at %><br>
+        <%= f.datetime_select :remember_created_at ,:disabled => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :sign_in_count %><br>
+        <%= f.number_field :sign_in_count ,:readonly => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :current_sign_in_at %><br>
+        <%= f.datetime_select :current_sign_in_at , :disabled => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_sign_in_at %><br>
+        <%= f.datetime_select :last_sign_in_at ,:disabled => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :current_sign_in_ip %><br>
+        <div class="input-group ">
+          <span class="input-group-addon"><i class="fa fa-laptop"></i></span>
+          <%= f.text_field :current_sign_in_ip , :class => 'form-control' , :readonly => true%>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_sign_in_ip %><br>
+        <div class="input-group ">
+          <span class="input-group-addon"><i class="fa fa-laptop"></i></span>
+          <%= f.text_field :last_sign_in_ip , :class => 'form-control' , :readonly => true%>
+        </div>
+      </div>
+
+    </div><!-- /.box-body -->
+
+    <div class="box-footer">
+      <%= f.submit "Save", :class => "btn bg-purple margin" %>
+      <%= link_to 'Back', user_index_path, :class => "btn bg-purple margin" %>
+    </div>
+<% end %>
