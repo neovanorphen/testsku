@@ -21,7 +21,7 @@
           </div>
         </div><!-- /.box-header -->
         <div class="box-body table-responsive" style="overflow-x: inherit">
-          <table id="cost_centers" class="datatable table table-condensed table-bordered table-hover table-responsive no-wrap">
+          <table id="table" class="datatable table table-condensed table-bordered table-hover table-responsive no-wrap">
             <thead>
             <tr>
               <th>Code</th>
@@ -36,9 +36,9 @@
                   <td><%= order.code %></td>
                   <td><%= order.date %></td>
                   <td><%= User.find(order.user_id).email%></td>
-                  <td><%= link_to 'Show', cost_center ,  :class =>"btn btn-primary btn-block btn-xs"%>
+                  <td><%= link_to 'Show', order ,  :class =>"btn btn-primary btn-block btn-xs"%>
                     <%= link_to 'Edit', edit_order_path(order),:class =>"btn btn-warning btn-block btn-xs" %>
-                    <%= link_to 'Delete', cost_center, method: :delete, data: { confirm: 'are you sure?' },:class =>"btn btn-danger btn-block btn-xs" %>
+                    <%= link_to 'Delete', order, method: :delete, data: { confirm: 'are you sure?' },:class =>"btn btn-danger btn-block btn-xs" %>
                   </td>
                 </tr>
             <% end %>

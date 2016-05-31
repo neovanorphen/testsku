@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :orders
 
+  resources :orders_products
+
+  get '/products/get/:id', to: 'products#get_product'
+
   devise_for :users, :controllers => { :registrations => "user/registrations" }
 
   devise_scope :user do

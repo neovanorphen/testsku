@@ -22,6 +22,26 @@
       </div>
     </div><!-- /.box-body -->
 
+    <div class="form-group">
+
+      <table id="orders_products" class="table table-bordered table-hover" >
+        <thead>
+        <tr>
+          <th data-hide="phone,tablet">Product</th>
+          <th data-hide="phone,tablet">Amount</th>
+          <th data-hide="phone,tablet">Options </th>
+        </tr>
+        </thead>
+        <tbody>
+        <%= f.fields_for :orders_products do |builder| %>
+            <%= render partial: 'orders_product_fields', :locals => { :f => builder} %>
+        <% end %>
+        </tbody>
+      </table>
+      <br>
+      <%=  link_to_add_fields "Add Product", f, :orders_products %>
+    </div>
+
     <div class="box-footer">
       <%= f.submit "Save", :class => "btn btn-primary" %>
       <%= link_to 'Back', orders_path ,:class =>"btn bg-purple margin"%>

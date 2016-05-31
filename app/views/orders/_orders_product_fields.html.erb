@@ -1,0 +1,14 @@
+<tr class="form-group">
+  <td>
+    <%= f.select(:product_id, Product.all.collect {|qt| [  "#{qt.name}: #{qt.sku}",qt.id]}, { :include_blank => "Choose a product..." }, :class => "chosen-select")%>
+  </td>
+
+  <td >
+    <%= f.number_field :amount, class: "amount", id: "amount" %>
+  </td>
+  <td>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to_remove_fields "Delete" , :class => f %>
+  </td>
+</tr>
+

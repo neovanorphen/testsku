@@ -15,3 +15,22 @@
 //= require jquery_ujs
 //= require app
 //= require_tree .
+
+
+function remove_fields(link) {
+    $(link).prev("input[type=hidden]").val("1");
+    $(link).closest(".form-group").hide();
+    $(link).closest(".form-group").remove();
+    updateTotal();
+    event.preventDefault();
+}
+
+function add_fields(link, association, content) {
+    var new_id = new Date().getTime();
+    var regexp = new RegExp("new_" + association, "g")
+    console.log(association);
+    $( "#"+association+" tr:last" ).after(content.replace(regexp, new_id));
+    //$(link).parent().parent().before(content.replace(regexp, new_id));
+    $('.chosen-select').chosen({ no_results_text: "No se encuentra: ", width: "100%" });
+    event.preventDefault();
+}
